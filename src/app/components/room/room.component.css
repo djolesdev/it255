@@ -1,0 +1,9 @@
+.room {
+    padding: 2em 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: #ececec;
+    box-shadow: 5px 6px 19px -4px rgba(0,0,0,0.75);
+    border-radius: 15px;
+}
