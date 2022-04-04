@@ -1,6 +1,13 @@
 <div class="room">
-    <h3>Room number {{room.id}}</h3>
-    <h3>Number of beds: {{room.beds}} </h3>
-    <h3>Balcony: {{room.balcony ? 'yes' : 'no'}}</h3>
-    <h3>Smoking: {{room.smoking ? 'yes' : 'no'}}</h3>
+  <h3>Room number {{ room.id }}</h3>
+  <h3>Number of beds: {{ room.beds }}</h3>
+  <h3>Balcony: {{ room.balcony ? "yes" : "no" }}</h3>
+  <h3>Smoking: {{ room.smoking ? "yes" : "no" }}</h3>
+  <div class="actions">
+      <button class="action-btn" id="update"
+      >Update</button>
+      <button class="action-btn" id="delete"
+      (click) = "onDelete(room)"
+      >Delete</button>
+    </div>
 </div>

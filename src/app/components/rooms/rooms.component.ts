@@ -9,12 +9,24 @@ import { Room } from '../Room';
 })
 export class RoomsComponent implements OnInit {
 
-  rooms: Room[] = ROOMS;
+  rooms: Room[];
 
 
-  constructor() { }
+  constructor() {
+    this.rooms = ROOMS;
+   }
 
   ngOnInit(): void {
+  }
+
+  deleteRoom(room: Room) {
+    this.rooms = this.rooms.filter(temp => {
+      return temp.id !== room.id
+    })
+  }
+
+  addRoom(room: Room) {
+    this.rooms.push(room)
   }
 
 }

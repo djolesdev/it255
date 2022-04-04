@@ -1,5 +1,5 @@
 export interface Room {
-    id?: number,
+    id: number,
     beds: number,
     balcony: boolean,
     smoking: boolean,

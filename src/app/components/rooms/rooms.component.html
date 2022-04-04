@@ -1,5 +1,12 @@
 <div class="rooms-container">
-    <app-room *ngFor="let room of rooms" [room]="room">
-        
+    <app-add-room-form 
+    class="form-container"
+    (onAddRoom) = "addRoom($event)"
+    >
+    </app-add-room-form>
+    
+    <app-room *ngFor="let room of rooms" [room]="room"
+    (onDeleteRoom) = "deleteRoom(room)"
+    >
     </app-room>
 </div>
