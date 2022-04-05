@@ -7,6 +7,7 @@ export const ROOMS: Room[] = [
         balcony: false,
         smoking: true,
         about: 'Small room on sunny side',
+        day_price: 10,
         reserved: false
     },
     {
@@ -15,6 +16,7 @@ export const ROOMS: Room[] = [
         balcony: true,
         smoking: true,
         about: 'Big room on sunny side',
+        day_price: 20,
         reserved: false
     },
     {
@@ -23,6 +25,7 @@ export const ROOMS: Room[] = [
         balcony: true,
         smoking: false,
         about: 'Medium room on sunny side',
+        day_price: 30,
         reserved: false
     }
 ]

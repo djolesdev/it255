@@ -2,7 +2,7 @@
     padding: 2em 3em;
     display: flex;
     flex-direction: column;
-    width: 210px;
+    width: 260px;
     gap: 1em;
     background-color: #ececec;
     box-shadow: 5px 6px 19px -4px rgba(0,0,0,0.75);
@@ -11,17 +11,47 @@
 .actions {
     display: flex;
     justify-content: space-between;
+    gap: 1em;
 }
 .action-btn {
     padding: 0.7em 1em;
+    width: 200px;
     border: none;
     color: white;
     font-size: 15px;
     border-radius: 10px;
+}
+.confirm {
+    width: 100%;
+    padding: 0.5em 0 0.5em 1em;
+    background-color: rgb(88, 180, 84);
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.visible {
+    display: flex;
+}
+.reserve-form {
+    width: 100%;
 }
 #update {
     background-color: rgb(53, 121, 246);
 }
 #delete {
     background-color: rgb(203, 68, 74);
+}
+#reserve {
+    background-color: rgb(88, 180, 84);
+}
+#num_days {
+    width: 100%;
+    /* padding: 0.5em 0 0.5em 1em; */
+    padding: 0.5em 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
 }

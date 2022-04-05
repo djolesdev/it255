@@ -4,5 +4,6 @@ export interface Room {
     balcony: boolean,
     smoking: boolean,
     about: string,
+    day_price: number,
     reserved: boolean,
 }

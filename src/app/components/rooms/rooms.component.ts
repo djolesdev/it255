@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ROOMS } from '../mock-rooms';
 import { Room } from '../Room';
+import { RoomService } from 'src/app/services/room.service';
 
 @Component({
   selector: 'app-rooms',
@@ -9,14 +10,14 @@ import { Room } from '../Room';
 })
 export class RoomsComponent implements OnInit {
 
-  rooms: Room[];
+  rooms: Room[] = []
 
-
-  constructor() {
-    this.rooms = ROOMS;
+  constructor(private roomService: RoomService) {
+    this.rooms = roomService.getRooms();
    }
 
   ngOnInit(): void {
+
   }
 
   deleteRoom(room: Room) {
@@ -27,6 +28,16 @@ export class RoomsComponent implements OnInit {
 
   addRoom(room: Room) {
     this.rooms.push(room)
+  }
+
+  reserveRoom(param: any) {
+    const room = param.room
+    const days = param.num_days
+    const total_price = room.day_price * days
+
+    // izmeniti vrednost property-a reserved na true za odabranu sobu!
+
+    alert(`Cena rezervacije za sobu broj ${room.id} iznosi $${total_price}`)
   }
 
 }

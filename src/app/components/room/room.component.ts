@@ -9,20 +9,36 @@ import { Room } from '../Room';
 
 export class RoomComponent implements OnInit {
 
+  isVisible: boolean = false;
+
   @Input() room!: Room;
   
-  @Output() onDeleteRoom: EventEmitter<Room>;
+  @Output() onDeleteRoom: EventEmitter<Room> = new EventEmitter();
+  @Output() onReserveRoom: EventEmitter<any> =  new EventEmitter();
+  
+  num_days: string = ''
 
   constructor() {
-    this.onDeleteRoom = new EventEmitter();
-   }
+
+  }
 
   ngOnInit(): void {
 
   }
-
+  
   onDelete(room: Room) {
     this.onDeleteRoom.emit(room)
+  }
+
+  onReserve(room: Room) {
+    if (this.num_days === '') {
+      return alert("Please enter number of days")
+    }
+    const temp = {
+      room,
+      num_days: this.num_days
+    }
+    this.onReserveRoom.emit(temp)
   }
 
 }

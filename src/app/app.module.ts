@@ -8,6 +8,8 @@ import { RoomsComponent } from './components/rooms/rooms.component';
 import { RoomComponent } from './components/room/room.component';
 import { AddRoomFormComponent } from './components/add-room-form/add-room-form.component';
 
+import { RoomService } from './services/room.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { AddRoomFormComponent } from './components/add-room-form/add-room-form.c
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    RoomService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

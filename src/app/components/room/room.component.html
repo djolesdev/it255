@@ -4,6 +4,7 @@
   <h3>Balcony: {{ room.balcony ? "yes" : "no" }}</h3>
   <h3>Smoking: {{ room.smoking ? "yes" : "no" }}</h3>
   <h3>{{room.about}}</h3>
+  <h3>Price for one night ${{room.day_price}}</h3>
   <div class="actions">
       <button class="action-btn" id="update"
       >Update</button>
@@ -11,4 +12,9 @@
       (click) = "onDelete(room)"
       >Delete</button>
     </div>
+    <form class="reserve-form" (ngSubmit) = "onReserve(room)">
+      <input type="number" name="num_days" id="num_days"
+      placeholder="Enter number of days"  [(ngModel)]="num_days">
+      <button type="submit" class="confirm">Confirm Reservation</button>
+    </form>
 </div>

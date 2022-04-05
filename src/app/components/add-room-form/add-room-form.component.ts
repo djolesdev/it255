@@ -18,7 +18,7 @@ export class AddRoomFormComponent implements OnInit {
   balcony: string = ''
   smoking: string = ''
   about: string = ''
-  formValid: boolean = this.isFormValid()
+  day_price: string = ''
 
   constructor() { 
 
@@ -27,19 +27,20 @@ export class AddRoomFormComponent implements OnInit {
 
   }
  
-  isFormValid() {
+  isFormValid(): boolean {
     const idValid = parseInt(this.id) > 0
     const bedsValid = parseInt(this.beds) > 0
     const balconyValid = this.balcony === 'yes' || this.balcony === 'no'
     const smokingValid = this.smoking === 'yes' || this.smoking === 'no'
     const aboutValid = this.about.length > 6
+    const priceValid = parseInt(this.day_price)> 0
 
-    return idValid && bedsValid && balconyValid && smokingValid && aboutValid
+    return priceValid && idValid && bedsValid && balconyValid && smokingValid && aboutValid
   }
 
    onSubmit(){
 
-    if (!this.formValid) {
+    if (!this.isFormValid()) {
       return alert("All inputs must be correctly filed!")
     }
 
@@ -53,6 +54,7 @@ export class AddRoomFormComponent implements OnInit {
       balcony: balconyBool,
       smoking: smokingBool,
       about: this.about,
+      day_price: parseInt(this.day_price),
       reserved: false,
     }
 
