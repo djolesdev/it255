@@ -6,6 +6,7 @@ export const ROOMS: Room[] = [
         beds: 2,
         balcony: false,
         smoking: true,
+        about: 'Small room on sunny side',
         reserved: false
     },
     {
@@ -13,6 +14,7 @@ export const ROOMS: Room[] = [
         beds: 1,
         balcony: true,
         smoking: true,
+        about: 'Big room on sunny side',
         reserved: false
     },
     {
@@ -20,6 +22,7 @@ export const ROOMS: Room[] = [
         beds: 3,
         balcony: true,
         smoking: false,
+        about: 'Medium room on sunny side',
         reserved: false
     }
 ]

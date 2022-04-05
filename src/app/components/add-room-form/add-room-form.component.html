@@ -1,14 +1,14 @@
 <form class="room-add-form" (ngSubmit) = "onSubmit()">
   <h2>Add new room</h2>
   <input
-    type="text"
+    type="number"
     name="id"
     id="room_id"
     [(ngModel)]="id"
     placeholder="Room number"
   />
   <input
-    type="text"
+    type="number"
     name="beds"
     id="beds"
     [(ngModel)]="beds"
@@ -19,15 +19,24 @@
     name="balcony"
     id="balcony"
     [(ngModel)]="balcony"
-    placeholder="Does room have balony?"
+    placeholder="Does room have balony? (yes/no)"
   />
   <input
     type="text"
     name="smoking"
     id="smoking"
     [(ngModel)]="smoking"
-    placeholder="Is smoking allowed?"
+    placeholder="Is smoking allowed? (yes/no)"
   />
 
-  <button type="submit" class="btn">Add</button>
+  <input
+  type="text"
+  name="about"
+  id="about"
+  [(ngModel)]="about"
+  placeholder="About room..."
+/>
+
+  <button type="submit" class="btn"
+  >Add</button>
 </form>
