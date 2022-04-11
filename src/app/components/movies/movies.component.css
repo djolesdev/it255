@@ -1,0 +1,42 @@
+.moive-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 1em;
+    padding: 2em 0;
+    /* background-color: hsl(236, 38%, 21%); */
+    color: white;
+}
+
+.movie {
+    display: flex;
+    padding: 1em;
+    width: 600px;
+    background-color: #a5a8c9a3;
+}
+
+.movie img {
+    width: 250px;
+    height: 400px;
+}
+.movie .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em 1.5em 0 1.5em;
+}
+.movie p {
+    display: table-cell;
+    text-align: justify;
+}
+.movie .left h3 {
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    letter-spacing: 2px;
+}

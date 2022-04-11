@@ -1,0 +1,13 @@
+.movie-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    color: white;
+    background-color: #a5a8c9a3;
+    padding: 2em;
+    gap: 1em;
+}
+
+.movie-box>p {
+    text-align: justify;
+}

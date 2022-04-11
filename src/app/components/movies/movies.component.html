@@ -1,0 +1,11 @@
+<div class="moive-container">
+    <div class="movie" *ngFor="let movie of movies; let i = index"
+    [routerLink]="['/movie', movie._id]"
+    >
+        <div class="left">
+            <h3>{{movie.titleOriginal}} <span>{{movie.rating}}</span></h3>
+            <p>{{movie.description}}</p>
+        </div>
+        <img src="{{movie.image}}" >
+    </div>
+</div>

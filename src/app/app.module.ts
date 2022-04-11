@@ -3,14 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
+import { MoviesComponent } from './components/movies/movies.component';
+import { MovieComponent } from './components/movie/movie.component'; // Za api
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MoviesComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
