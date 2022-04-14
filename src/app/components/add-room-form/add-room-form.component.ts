@@ -1,7 +1,5 @@
 import { Component, OnInit , Output, EventEmitter} from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Room } from '../Room';
-import { RoomComponent } from '../room/room.component';
+import { Room } from '../../model/room.model';
 
 @Component({
   selector: 'app-add-room-form',

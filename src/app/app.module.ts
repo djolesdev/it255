@@ -10,6 +10,9 @@ import { AddRoomFormComponent } from './components/add-room-form/add-room-form.c
 
 import { RoomService } from './services/room.service';
 
+import { StoreModule } from '@ngrx/store';
+import { roomReducer } from './state/room/room.reducer';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,8 +22,9 @@ import { RoomService } from './services/room.service';
   ],
   imports: [
     BrowserModule,
+    StoreModule.forRoot({rooms: roomReducer}),
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     RoomService

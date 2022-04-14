@@ -5,9 +5,12 @@
     >
     </app-add-room-form>
     
-    <app-room *ngFor="let room of rooms" [room]="room"
-    (onDeleteRoom) = "deleteRoom(room)"
+    <app-room 
+    *ngFor="let room of rooms | async" [room]="room"
+    (onDeleteRoom) = "deleteRoom(room.id)"
     (onReserveRoom) = "reserveRoom($event)"
     >
+    {{room.smoking}}
     </app-room>
+    
 </div>
