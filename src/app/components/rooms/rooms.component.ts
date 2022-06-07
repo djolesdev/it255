@@ -14,7 +14,8 @@ export class RoomsComponent implements OnInit {
 
   constructor(private roomService: RoomService) {
     this.rooms = this.roomService.getRooms()
-   }
+  
+  }
 
   ngOnInit(): void {
     

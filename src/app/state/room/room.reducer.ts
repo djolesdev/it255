@@ -11,8 +11,6 @@ export const initialState: RoomState = {
   rooms: ROOMS,
 };
 
-
-
 export const roomReducer = createReducer(
   initialState,
   on(addRoom, (state, { room }) => ({
