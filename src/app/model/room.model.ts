@@ -6,4 +6,5 @@ export interface Room {
     about: string,
     day_price: number,
     reserved: boolean,
+    
 }
